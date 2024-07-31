@@ -34,5 +34,8 @@ RUN rm /etc/portage/make.conf/02-binpkg
 RUN useradd -m -G users,portage,wheel,docker -s /bin/bash testrunner
 RUN usermod --append --groups docker portage
 
+COPY tools/sed-or-die /usr/local/sbin/sed-or-die
+COPY tools/unstable_keywords /usr/local/sbin/unstable_keywords
+RUN chmod +x /usr/local/sbin/*
 
 CMD ["/bin/bash"]

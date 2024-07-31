@@ -22,8 +22,7 @@ SLOT="0"
 RESTRICT="!test? ( test )"
 
 RDEPEND="app-misc/jq
-	app-portage/gentoolbox
-	app-portage/repoman"
+	app-portage/gentoolbox"
 DEPEND="test? (
 	${RDEPEND}
 	dev-util/bats-assert

@@ -43,6 +43,8 @@ RUN eix-update
 # Remove binary package requirement
 RUN rm /etc/portage/make.conf/02-binpkg
 
+RUN cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
+
 # Add a testrunner user and add portage to docker group
 RUN useradd -m -G users,portage,wheel,docker -s /bin/bash testrunner
 RUN usermod --append --groups docker portage

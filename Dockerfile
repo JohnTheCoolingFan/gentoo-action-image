@@ -20,9 +20,9 @@ RUN emerge --sync
 RUN emerge -uDU world
 RUN etc-update --automode -5
 RUN emerge app-portage/eix app-portage/flaggie app-portage/gentoolkit dev-vcs/git
-RUN emerge --autounmask y --autounmask-write y --autounmask-only y acct-group/docker app-misc/jq dev-util/pkgdev
+RUN emerge --autounmask y --autounmask-write y --autounmask-only y acct-group/docker app-misc/jq dev-util/pkgdev app-portage/gentoolbox dev-libs/github-action-lib
 RUN etc-update --automode -5
-RUN emerge acct-group/docker app-misc/jq dev-util/pkgdev
+RUN emerge acct-group/docker app-misc/jq dev-util/pkgdev app-portage/gentoolbox dev-libs/github-action-lib
 RUN emerge --depclean
 RUN eclean-pkg --deep
 RUN eclean-dist --deep

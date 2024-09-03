@@ -32,6 +32,10 @@ RUN emerge --autounmask y --autounmask-write y --autounmask-only y acct-group/do
 RUN etc-update --automode -5
 # Install the tools
 RUN emerge acct-group/docker app-misc/jq dev-util/pkgdev app-portage/gentoolbox dev-libs/github-action-lib
+# Install desktop deps
+RUN emerge --autounmask y --autounmask-write y --autounmask-only y --noreplace gui-libs/gtk virtual/libc dev-libs/glib x11-libs/cairo x11-libs/pango
+RUN etc-update --automode -5
+RUN emerge --noreplace gui-libs/gtk virtual/libc dev-libs/glib x11-libs/cairo x11-libs/pango
 
 # Clean and update cache
 RUN emerge --depclean

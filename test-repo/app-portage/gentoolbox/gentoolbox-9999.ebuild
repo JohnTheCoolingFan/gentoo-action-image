@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{8,9,10,11,12,13} )
 
-DISTUTILS_USE_PEP517=no
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 
@@ -30,7 +30,7 @@ RDEPEND="app-portage/gentoolkit[${PYTHON_USEDEP}]"
 python_prepare_all() {
 	python_setup
 	echo VERSION="${PVR}" "${PYTHON}" setup.py set_version
-	VERSION="${PVR}" "${PYTHON}" setup.py set_version
+	VERSION="${PVR}" "${PYTHON}" esetup.py set_version
 	distutils-r1_python_prepare_all
 }
 

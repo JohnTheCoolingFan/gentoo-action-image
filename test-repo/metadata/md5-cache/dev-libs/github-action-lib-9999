@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install test unpack
+DEPEND=test? ( app-misc/jq app-portage/gentoolbox dev-util/bats-assert dev-util/bats-file )
+DESCRIPTION=A library script to assist in writing GitHub Actions for Gentoo Linux
+EAPI=8
+HOMEPAGE=https://github.com/JohnTheCoolingFan/gentoo-github-action-lib
+INHERIT=git-r3
+IUSE=test
+LICENSE=LGPL-3
+PROPERTIES=live
+RDEPEND=app-misc/jq app-portage/gentoolbox
+RESTRICT=!test? ( test )
+SLOT=0
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=2b4aff45a33609c8fa1a7e96b6a1ffa9

@@ -1,9 +1,11 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{8,9,10,11,12} )
+PYTHON_COMPAT=( python3_{8,9,10,11,12,13} )
+
+DISTUTILS_USE_PEP517=no
 
 inherit distutils-r1
 
@@ -20,13 +22,10 @@ else
 fi
 
 SLOT="0"
+KEYWORDS=""
 IUSE=""
 
-KEYWORDS=""
-
 RDEPEND="app-portage/gentoolkit[${PYTHON_USEDEP}]"
-
-DISTUTILS_USE_SETUPTOOLS=no
 
 python_prepare_all() {
 	python_setup

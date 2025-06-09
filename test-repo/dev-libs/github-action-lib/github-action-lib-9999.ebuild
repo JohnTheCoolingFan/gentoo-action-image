@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="A library script to assist in writing GitHub Actions for Gentoo Linux"
 HOMEPAGE="https://github.com/JohnTheCoolingFan/gentoo-github-action-lib"
@@ -15,9 +15,9 @@ else
 	SRC_URI="https://github.com/JohnTheCoolingFan/gentoo-github-action-lib/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
+SLOT="0"
 KEYWORDS=""
 IUSE="test"
-SLOT="0"
 
 RESTRICT="!test? ( test )"
 

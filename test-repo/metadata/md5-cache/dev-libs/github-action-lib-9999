@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=app-misc/jq app-portage/gentoolbox
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_eclasses_=git-r3	2f8cdb10b033f92c3136aa6488a31c98
 _md5_=2b4aff45a33609c8fa1a7e96b6a1ffa9
